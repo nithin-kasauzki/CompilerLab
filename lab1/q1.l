@@ -1,15 +1,16 @@
 %{
-/* Lex code for ignoring redundant spaces, tabs, new lines, 
-single line
-and multiline comments */
+
 %}
 
 %%
+"//".*  ; 
+"/*"([^*]|\*+[^*/])*"*/"  ;
+[ \t\n]+ ;
+[^ \t\n]+  {printf("%s\n",yytext);}
 
-[ \t\n] ;
+%%
 
-
-\/\/.* ;
-
-
-\/\*([^*]|\*+[^*/])*\*+\/ ;
+int main() {
+    yylex();
+    return 0;
+}

@@ -7,21 +7,24 @@ LETTER  [a-zA-Z]
 
 %%
 
+"//".*  ; 
+"/*"([^*]|\*+[^*/])*"*/"  ;
 
-int|float|char|if|else|while|for|return   { printf("\nKEYWORD: %s\n", yytext); }
+int|float|char|if|else|while|for|return|include|switch|void|main|long|continue|break   { printf("\nKEYWORD: %s", yytext); }
 
 
 {LETTER}({LETTER}|{DIGIT})*              { 
                                             if (strlen(yytext) <= 32) {
-                                                printf("\nIDENTIFIER: %s\n", yytext);
+                                                printf("\nIDENTIFIER: %s", yytext);
                                             } else {
-                                                printf("\nError: Identifier too lengthy\n");
+                                                printf("\nError: Identifier too lengthy");
                                             }
                                          }
 
 
-{DIGIT}+(\.{DIGIT}+)?                    { printf("\nNUMERIC: %s\n", yytext); }
+{DIGIT}+(\.{DIGIT}+)?                    { printf("\nNUMERIC: %s", yytext); }
 
+. ;
 %%
 
 int main() {

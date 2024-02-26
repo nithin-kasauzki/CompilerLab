@@ -15,7 +15,7 @@
 \>                                      { printf("greater than-OPERATOR: >\n"); }
 \&\&                                    { printf("and-OPERATOR: &&\n"); }
 \|\|                                    { printf("or-OPERATOR: ||\n"); }
-
+. ;
 %%
 
 int main() {

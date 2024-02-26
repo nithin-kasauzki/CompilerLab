@@ -1,12 +1,11 @@
-#include<stdio.h>
-//this is comment
 
-/* this is also comment*/
-int main(){
-    int a,b,c;
-    a = 5;
-    printf("hello world! ");
-    printf("%d",10*a);
-
+int main() {
+    int a = 10;
+    int b = 5;
+    int sum = a + b;
+    int grt = a>=b?a:b;
+    
+    printf("The sum of %d and %d is %d\n", a, b, sum);
+    
     return 0;
 }
