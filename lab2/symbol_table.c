@@ -39,9 +39,9 @@ int main() {
     struct Symbol* symbolTable = NULL;
 
     // Example: Inserting symbols into the symbol table
-    insertSymbol(&symbolTable, "variable1", "int", 0, 4, "global");
-    insertSymbol(&symbolTable, "variable2", "float", 4, 4, "function1");
-    insertSymbol(&symbolTable, "variable3", "char", 8, 1, "function2");
+    insertSymbol(&symbolTable, "var1", "int", 0, 4, "global");
+    insertSymbol(&symbolTable, "var3", "float", 4, 4, "function1");
+    insertSymbol(&symbolTable, "var2", "char", 8, 1, "function3");
 
     // Display the symbol table
     displaySymbolTable(symbolTable);

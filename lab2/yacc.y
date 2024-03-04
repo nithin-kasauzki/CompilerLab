@@ -62,9 +62,4 @@ void yyerror(const char *msg) {
 }
 
 int yyparse();
-/*
-int main() {
-    yyparse();
-    return 0;
-}
-*/
+
