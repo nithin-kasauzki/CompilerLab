@@ -19,6 +19,8 @@ int result;
 %token <id> ID
 %token EOL
 
+%type <num> expression
+
 %left '+' '-'
 %left '*' '/'
 %left AND OR
@@ -59,7 +61,10 @@ void yyerror(const char *msg) {
     exit(1);
 }
 
+int yyparse();
+/*
 int main() {
     yyparse();
     return 0;
 }
+*/
