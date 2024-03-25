@@ -42,32 +42,14 @@
      WHILE = 258,
      LPAREN = 259,
      RPAREN = 260,
-     LBRACE = 261,
-     RBRACE = 262,
-     ID = 263,
-     NUM = 264,
-     EQ = 265,
-     NEQ = 266,
-     LT = 267,
-     GT = 268,
-     LTE = 269,
-     GTE = 270
+     ID = 261
    };
 #endif
 /* Tokens.  */
 #define WHILE 258
 #define LPAREN 259
 #define RPAREN 260
-#define LBRACE 261
-#define RBRACE 262
-#define ID 263
-#define NUM 264
-#define EQ 265
-#define NEQ 266
-#define LT 267
-#define GT 268
-#define LTE 269
-#define GTE 270
+#define ID 261
 
 
 

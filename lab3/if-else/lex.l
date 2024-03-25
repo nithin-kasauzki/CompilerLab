@@ -1,21 +1,13 @@
 %{
-#include "y.tab.h"
+#include "y.tab.h" 
 %}
-
-alpha [A-Za-z]
-digit [0-9]
 %%
-[ \t\n]   
-if    return IF;
-then    return THEN;
-else    return ELSE;
-{digit}+    return NUM;
-{alpha}({alpha}|{digit})*    return ID;
-"<="    return LE;
-">="    return GE;
-"=="    return EQ;
-"!="    return NE;
-"||"    return OR;
-"&&"    return AND;
-.    return yytext[0];
+"==" {return EQ;}
+"if" { return IF; }
+"else" { return ELSE; }
+[0-9]+ { return NUMBER; }
+[a-zA-Z][a-zA-Z0-9]* { return IDENTIFIER; }
+[\n\t ]+  { return yytext[0]; } 
 %%
+int yywrap() { return 1;
+}

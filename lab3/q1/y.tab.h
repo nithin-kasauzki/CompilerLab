@@ -40,18 +40,18 @@
       know about them.  */
    enum yytokentype {
      IF = 258,
-     ELSE = 259,
-     IDENTIFIER = 260,
-     NUMBER = 261,
-     EQ = 262
+     LPAREN = 259,
+     RPAREN = 260,
+     ELSE = 261,
+     ID = 262
    };
 #endif
 /* Tokens.  */
 #define IF 258
-#define ELSE 259
-#define IDENTIFIER 260
-#define NUMBER 261
-#define EQ 262
+#define LPAREN 259
+#define RPAREN 260
+#define ELSE 261
+#define ID 262
 
 
 
